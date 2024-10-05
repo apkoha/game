@@ -1,0 +1,125 @@
+/* nunito-regular - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/nunito-v26-cyrillic_latin-regular.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* nunito-700 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/nunito-v26-cyrillic_latin-700.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Nunito, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: rgba(0, 0, 0 ,0);
+  -webkit-tap-highlight-color: transparent;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #221f1f;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.main {
+  background-color: black;
+}
+
+.container {
+  background-color: grey;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  width: 704px;
+  padding: 20px;
+}
+
+.game__card {
+  position: relative;
+  width: 120px;
+  height: 100px;
+  background-color: gray;
+  border-radius: 5px;
+  perspective: 500px;
+  cursor: pointer;
+}
+
+
+.card__inner {
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  width: 100%;
+  height: 100%;
+}
+
+.card__inner-active, 
+.card__inner-open{
+  transform: rotateY(180deg);
+}
+
+.card__front {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background-color: orange;
+  border-radius: 5px;
+  background-image: url("./img/star-icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.front__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;  
+}
+
+.card__back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);  
+  background-color: rgb(255, 89, 23);
+  border-radius: 5px;
+}
+
+.back__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  overflow: hidden;  
+}
