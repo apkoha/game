@@ -1,3 +1,45 @@
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/montserrat-v26-cyrillic_latin-regular.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/montserrat-v26-cyrillic_latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/montserrat-v26-cyrillic_latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/montserrat-v26-cyrillic_latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./assets/fonts/montserrat-v26-cyrillic_latin-700italic.woff2")
+    format("woff2");
+}
+
 /* nunito-regular - cyrillic_latin */
 @font-face {
   font-display: swap;
@@ -44,18 +86,91 @@ html {
   color: #221f1f;
 }
 
+img,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  max-height: 100%;
+}
+
+button {
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+fieldset {
+  margin: 0;
+}
+
+iframe {
+  border: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
 .container {
   max-width: 1260px;
   margin: 0 auto;
   padding: 0 40px;
 }
 
-.main {
-  background-color: black;
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  background-color: #00284d;
 }
 
-.container {
-  background-color: grey;
+.header__title {
+  color:#ffffff;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 96px);
+  min-height: 488px;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 0 40px;
+  background-color:#004d49;
 }
 
 .main__container {
@@ -64,13 +179,14 @@ html {
   gap: 16px;
   width: 704px;
   padding: 20px;
+  background-color: #0c3e85;
 }
 
 .game__card {
   position: relative;
   width: 120px;
   height: 100px;
-  background-color: gray;
+  background-color: #0c3e85;
   border-radius: 5px;
   perspective: 500px;
   cursor: pointer;
@@ -85,7 +201,7 @@ html {
 }
 
 .card__inner-active, 
-.card__inner-open{
+.card__inner-open {
   transform: rotateY(180deg);
 }
 
@@ -94,7 +210,7 @@ html {
   inset: 0;
   backface-visibility: hidden;
   overflow: hidden;
-  background-color: orange;
+  background-color: #ff9f00;
   border-radius: 5px;
   background-image: url("./img/star-icon.png");
   background-position: center;
@@ -113,7 +229,7 @@ html {
   inset: 0;
   backface-visibility: hidden;
   transform: rotateY(180deg);  
-  background-color: rgb(255, 89, 23);
+  background-color: #ff9f00;
   border-radius: 5px;
 }
 
@@ -122,4 +238,91 @@ html {
   max-width: 100%;
   height: auto;
   overflow: hidden;  
+}
+
+.footer {
+  min-width: 530px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.footer__container {
+  background-color: #00284d;
+}
+
+.footer__nav-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 48px;
+}
+
+.footer__list-link:hover,
+.footer__list-link:focus {
+  color: #e4b994;
+  outline: none;
+}
+
+.footer__list-link:active {
+  color: #e08f48;
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .footer {
+    min-width: 320px;
+  }
+
+  .footer__list-item {
+    font-size: 12px;
+  }
+}
+
+@media (hover: hover) {
+  .button__play:hover {
+    background-image: url(./assets/svg/play-focus.png);
+    scale: 1.05;
+  }
+
+  .pause:hover {
+    background-image: url(./assets/svg/pause-focus.png);
+    scale: 1.05;
+  }
+
+  .button__forward:hover {
+    background-image: url(./assets/svg/forward-focus.png);
+    scale: 1.05;
+  }
+
+  .button__back:hover {
+    background-image: url(./assets/svg/backward-focus.png);
+    scale: 1.05;  
+  }
+}
+
+@media (hover: none) {
+  .button__play:active {
+    background-image: url(./assets/svg/play-active.png);
+    scale: 1.05;
+  }
+
+  .pause:active {
+    background-image: url(./assets/svg/pause-active.png);
+    scale: 1.05;
+  }
+
+  .button__forward:active {
+    background-image: url(./assets/svg/forward-active.png);
+    scale: 1.05;
+  }
+
+  .button__back:active {
+    background-image: url(./assets/svg/backward-active.png);
+    scale: 1.05;  
+  }
 }
