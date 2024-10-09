@@ -1,42 +1,42 @@
 [
   {
     "color": "1",
-    "urlToImages": "../img/troll.png"
+    "urlToImages": "./img/troll.png"
   },
   {
     "color": "2",
-    "urlToImages": "../img/pepe.png"
+    "urlToImages": "./img/pepe.png"
   },
   {
     "color": "3",
-    "urlToImages": "../img/smile.png"
+    "urlToImages": "./img/smile.png"
   },
   {
     "color": "4",
-    "urlToImages": "../img/portugalian.png"
+    "urlToImages": "./img/portugalian.png"
   },
   {
     "color": "5",
-    "urlToImages": "../img/smart-man.png"
+    "urlToImages": "./img/smart-man.png"
   },
   {
     "color": "6",
-    "urlToImages": "../img/Musk.png"
+    "urlToImages": "./img/Musk.png"
   },
   {
     "color": "7",
-    "urlToImages": "../img/Ming.png"
+    "urlToImages": "./img/Ming.png"
   },
   {
     "color": "8",
-    "urlToImages": "../img/Chan.png"
+    "urlToImages": "./img/Chan.png"
   },
   {
     "color": "9",
-    "urlToImages": "../img/One-Piece.png"
+    "urlToImages": "./img/One-Piece.png"
   },
   {
     "color": "10",
-    "urlToImages": "../img/Squidward.png"
+    "urlToImages": "./img/Squidward.png"
   }
 ]
